@@ -1,0 +1,22 @@
+ul.nav.navbar-nav.nav-pos-right.navbar-left {
+	margin-left:10px;
+}
+.history-panel p {
+	margin-top:5px;
+}
+@font-face {
+font-family: "SignPainter";
+src: url("https://restmoi.com/assets/fonts/SignPainter.eot");
+src: 
+url("https://restmoi.com/assets/fonts/SignPainter.woff") format("woff"),
+url("https://restmoi.com/assets/fonts/SignPainter.otf") format("opentype"),
+url("https://restmoi.com/assets/fonts/SignPainter.svg") format("svg");
+}
+@font-face {
+font-family: "Helvetica";
+src: url("https://restmoi.com/assets/fonts/Helvetica.eot");
+src: 
+url("https://restmoi.com/assets/fonts/Helvetica.woff") format("woff"),
+url("https://restmoi.com/assets/fonts/Helvetica.otf") format("opentype"),
+url("https://restmoi.com/assets/fonts/Helvetica.svg") format("svg");
+}
