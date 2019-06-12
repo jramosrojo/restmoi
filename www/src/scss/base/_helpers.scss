@@ -48,7 +48,7 @@
 	            @include font-size(7, desktop, true, false, true);
 	        }
 	    }
-	    @include font-weight(bold);
+	    @include font-weight(semibold);
 	    line-height: 16px;
 	    text-decoration: none;
 	    background-color: color(bg, 1);

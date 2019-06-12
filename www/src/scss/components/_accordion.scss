@@ -1,5 +1,5 @@
 .accordion {
-	@include font-size(7, mobile, true, true, true);
+	@include font-size(7, mobile, true, true);
     list-style: none;
     padding: 0;
 
@@ -34,7 +34,7 @@
     padding: 18px 0;
     cursor: pointer;
 	color: color(typography, 1);
-	@include font-weight(bold);
+	@include font-weight(semibold);
 
     span {
         width: calc(100% - 32px);

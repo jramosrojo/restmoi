@@ -1,4 +1,5 @@
 .site-footer {
+	position: relative;
     @include font-size(8, mobile, true, true, true);
     @if ( get-font-size(8, desktop) != get-font-size(8, mobile) ) {
         @include media( '>medium' ) {
@@ -6,8 +7,19 @@
         }
     }
     color: color(typography, 3);
-	background: color(typography, 1);
-	z-index: 1;
+	margin-top: 80px; /* Give more padding because of the footer bg */
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 300px;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSIyNjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICA8cGF0aCBkPSJNLjMzOC44NDJDMTY3LjQ1NSA4My4zOTQgNjQ3LjM0MiA4My4zOTQgMTQ0MCAuODQyVjI2N0guMzM4Qy0xNjYuNzggNy4wMS0xNjYuNzgtODEuNzEuMzM4Ljg0MnoiIGZpbGw9IiMxRDJCNEMiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+		background-size: 1440px 300px;
+		background-repeat: no-repeat;
+	}
 
     a {
         @include anchor-aspect(footer);
@@ -18,8 +30,8 @@
     position: relative; /* To display all elements above the background color */
     display: flex;
     flex-wrap: wrap;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .footer-brand,
@@ -62,10 +74,17 @@
 
 @include media( '>medium' ) {
 
+	.site-footer {
+		margin-top: 116px; /* Give more padding because of the footer bg */
+
+		&::before {
+			height: 267px;
+			background-size: 1440px 267px;
+		}
+	}
+
     .site-footer-inner {
         justify-content: space-between;
-		padding-top: 80px;
-		padding-bottom: 64px;
     }
 
     .footer-brand,

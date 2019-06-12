@@ -9,46 +9,44 @@
     /* global ScrollReveal */
     const sr = window.sr = ScrollReveal()
 
-    sr.reveal('.hero-title, .hero-paragraph, .hero-cta', {
-      delay: 150,
-      duration: 1000,
-      distance: '60px',
-      easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
-      origin: 'bottom',
-      interval: 150
-    })
-
-    sr.reveal('.hero-right-decoration', {
+    sr.reveal('.hero-shapes', {
       duration: 1000,
       distance: '40px',
-      easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+      origin: 'right'
+    })
+
+    sr.reveal('.header-sun', {
+      delay: 200,
+      duration: 1000,
+      distance: '40px',
+      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
       origin: 'top'
     })
 
-    sr.reveal('.hero-left-decoration', {
-      duration: 1000,
-      distance: '40px',
-      easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
-      origin: 'bottom'
-    })
-
-    sr.reveal('.clients li', {
-      delay: 300,
+    sr.reveal('.hero-media', {
+      delay: 200,
       duration: 1000,
       rotate: {
         y: 50
       },
-      easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
-      interval: 150
+      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)'
     })
 
-    sr.reveal('.feature, .tabs-links li, .testimonial, .pricing-table, .pricing-faqs, .cta-inner', {
+    sr.reveal('.feature-extended-image', {
+      duration: 600,
+      scale: 0.9,
+      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+      viewFactor: 0.5
+    })
+
+    sr.reveal('.testimonial, .pricing-table', {
       duration: 600,
       distance: '40px',
-      easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
       interval: 100,
       origin: 'bottom',
-      viewFactor: 0.2
+      viewFactor: 0.5
     })
   }
 
@@ -65,32 +63,6 @@
         } else {
           panel.style.maxHeight = `${panel.scrollHeight}px`
         }
-      })
-    }
-  }
-
-  // Tabs component
-  const tabLinksAll = document.getElementsByClassName('tab-link')
-
-  if (tabLinksAll.length) {
-    for (let i = 0; i < tabLinksAll.length; i++) {
-      tabLinksAll[i].addEventListener('click', function (e) {
-        e.preventDefault()
-        let tabLinksContainer = tabLinksAll[i].parentNode.parentNode
-        let tabPanels = tabLinksContainer.nextElementSibling.getElementsByClassName('tab-panel')
-        let tabLinks = tabLinksContainer.getElementsByClassName('tab-link')
-        // Remove is-active class from all links and panels
-        for (let i = 0; i < tabLinks.length; i++) {
-          tabLinks[i].classList.remove('is-active')
-        }
-        for (let i = 0; i < tabPanels.length; i++) {
-          tabPanels[i].classList.remove('is-active')
-        }
-        // Get the ID of panel to display
-        let tabID = this.getAttribute('href')
-        // Add is-active class to matching link and panel
-        tabLinksAll[i].classList.add('is-active')
-        document.querySelector(tabID).classList.add('is-active')
       })
     }
   }

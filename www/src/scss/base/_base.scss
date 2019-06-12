@@ -65,7 +65,7 @@ figure {
 }
 
 figcaption {
-	@include font-size(8, mobile, true, true);
+	@include font-size(7, mobile, true, true);
 	padding: 8px 0;
 }
 
