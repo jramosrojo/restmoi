@@ -2,3 +2,6 @@
 section.hero.text-light.text-center {
     padding-top: 0px!important;
 }
+.features-inner.section-inner {
+    padding-top: 0px;
+}
